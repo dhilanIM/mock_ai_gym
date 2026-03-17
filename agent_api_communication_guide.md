@@ -6,8 +6,13 @@ This document is a high-level guide to explain the architecture to colleagues. I
 
 Instead of agents talking "directly" to each other peer-to-peer (which is messy and hard to log), they all talk to a **Central API Server** (the Sandbox). The Sandbox acts like a public bulletin board.
 
-![System Diagram Overview](/absolute/path/to/placeholder.jpg)
-*(Imagine a central server, with multiple robot heads pointing towards it)*
+```mermaid
+graph TD
+    API((Sandbox API<br>Central Server))
+    A1[🤖 Agent 1] -->|Reads & Writes| API
+    A2[🤖 Agent 2] -->|Reads & Writes| API
+    A3[🤖 Agent 3] -->|Reads & Writes| API
+```
 
 ---
 
